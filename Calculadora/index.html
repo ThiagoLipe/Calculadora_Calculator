@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        container {
+            width: 100vw; height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            background-color: #242424;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        input {
+            width: 169pt; height: 40pt;
+            border-radius: 20px;
+            border-style: none;
+            font-size: 20pt;
+        }
+
+        button {
+            background-color: #5A6F8A;
+            width: 70px; height: 70px;
+            border-style: none;
+            border-radius: 50px;
+            font-size: 25pt;
+            margin: 2px;
+            color: white;
+        }
+
+        button:hover {
+            border-radius: 20px;
+            background-color: #1ABDB5;
+        }
+
+        .operadores {
+            background-color: #328F8A;
+        }
+    </style>
+</head>
+<body>
+    <container>
+        <div>
+            <button class="operadores" onclick="clean('')">C</button>
+
+            <input type="text">
+
+            <section class="linha1">
+                <button onclick="insert('7')">7</button>
+                <button onclick="insert('8')">8</button>
+                <button onclick="insert('9')">9</button>
+                <button class="operadores" onclick="insert('/')">/</button>
+            </section>
+
+            <section class="linha2">
+                <button onclick="insert('4')">4</button>
+                <button onclick="insert('5')">5</button>
+                <button onclick="insert('6')">6</button>
+                <button class="operadores" onclick="insert('*')">x</button>
+            </section>
+
+            <section class="linha3">
+                <button onclick="insert('1')">1</button>
+                <button onclick="insert('2')">2</button>
+                <button onclick="insert('3')">3</button>
+                <button class="operadores" onclick="insert('-')">-</button>
+            </section>
+
+            <button class="linha4">0</button>
+            <button class="operadores" style="width: 111pt;" onclick="insert('=')">=</button>
+            <button class="operadores" onclick="insert('+')">+</button>
+        </div>
+    </container>
+    
+</body>
+</html>
